@@ -8,16 +8,17 @@ const app=express();//This is the instance of express js application
 // })
 // app.use('/test/2',(req,res)=>{
 //     res.send("Hello dev!")
+// });
+app.get("/user/",(req,res)=>{
+    console.log(req.query);
+    res.send({firstname:"devesh",lastName:"Chhabra"})
+})
+// app.post('/user',(req,res)=>~{
+//     res.send("Data successfully saved to database!!!");
 // })
-app.get('/user',(req,res)=>{
-    res.send({firstName:"devesh",lastName:"chhabra"})
-})
-app.post('/user',(req,res)=>{
-    res.send("Data successfully saved to database!!!");
-})
-app.delete("/user",(req,res)=>{
-    res.send("deleted from the databases")
-})
+// app.delete("/user",(req,res)=>{
+//     res.send("deleted from the databases")
+// })
 // app.use('/hello',(req,res)=>{
 //         res.send("Jai shree Ram")})
 // app.use('/',(req,res)=>{
